@@ -1,0 +1,253 @@
+$small: 350px
+$medium: 900px
+$large: 1200px
+
+header
+  display: flex
+  justify-content: center
+.navbar
+  position: fixed
+  top: 15px
+  width: 40%
+  border-radius: 30px
+  background: rgba(255, 255, 255, 0.25)
+  backdrop-filter: blur(10px)
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  z-index: 9999
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-evenly
+  padding: 15px 0
+  @media screen and (max-width: $medium) 
+    width: 100%
+    border-radius: 0px
+  @media screen and (min-width: $medium) and (max-width: $large) 
+    width: 50%
+    border-radius: 30px
+  a
+    font-family: 'Gloock'
+    text-decoration: none
+    color: black
+    &:hover
+      text-decoration: underline
+
+#home
+  margin: 20px
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  height: 100vh
+  align-items: center
+  justify-content: center 
+  align-content: center
+  background: rgb(203,255,196)
+  background: radial-gradient(circle, rgba(203,255,196,1) 0%, rgba(90,233,185,0.6783963585434174) 20%, rgba(255,255,255,0) 40%)
+  .greeting-container
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  .greeting-box
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 20px
+    @media screen and (max-width: $small) 
+      padding: 10px
+      width: 100% 
+    @media screen and (min-width: $small) and (max-width: $medium) 
+      width: 90% 
+    &__title
+      display: flex
+      flex-direction: row
+      align-items: baseline
+      justify-content: flex-start
+      flex-wrap: nowrap
+      margin: 0
+  .greeting-img
+    width: 15%
+    display: flex
+    flex-direction: row
+    justify-content: center 
+    @media screen and (max-width: $small) 
+      width: 60% 
+    @media screen and (min-width: $small) and (max-width: 550px) 
+      width: 40%
+    @media screen and (min-width: 550px) and (max-width: $medium) 
+      width: 30%
+    img
+      width: 100%
+      height: auto
+      border-radius: 10% 
+      transform: rotate(5deg)
+      box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+      -webkit-box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+      -moz-box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+
+  h1
+    margin: 0 8px
+  p
+    margin-top: 10px
+    margin-left: 10px
+    font-weight: normal 
+    font-size: 18px
+  strong
+    font-weight: bold
+    text-decoration: underline
+  .scroll-icon 
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    align-self: flex-end
+    bottom: 60px
+    position: absolute
+    img
+      height: auto
+      width: 40px
+  
+
+#about
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: center
+  align-items: center
+  .about-content 
+    margin: 20px
+    background-color: rgba(90,233,185,0.67)
+    min-height: 200px
+    padding: 20px
+    border-radius: 30px
+    width: 60%
+    display: flex 
+    flex-direction: column
+    align-items: center
+    @media screen and (max-width: $small)  
+      width: 100% 
+    @media screen and (min-width: $small) and (max-width: $medium) 
+      width: 90% 
+  h2 
+    margin: 20px 0
+  p
+    font-size: 19px
+  br 
+    margin: 10px 0
+
+
+#projects
+  padding: 20px
+  margin-top: 20px
+  .projects-header
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 20px
+    h2
+      margin-bottom: 0
+  .project-link
+    font-family: 'Gloock'
+    font-size: 18px
+    color: black
+    text-align: center
+    text-decoration: none
+  .projects-box
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-evenly
+    @media screen and (min-width: 550px) and (max-width: 1200px)  
+      flex-direction: column
+    &__container
+      box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+      -webkit-box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+      -moz-box-shadow: 14px 9px 13px -3px rgba(0, 0, 0, 0.027)
+      display: flex
+      flex-direction: column
+      align-items: space-between
+      border-radius: 15px
+      min-width: 300px
+      height: min-content
+      width: 350px
+      @media screen and (max-width: 1200px) 
+        margin: 20px 0
+      @media screen and (min-width: 550px) and (max-width: 1200px)   
+        border-radius: 0px
+        flex-direction: row
+        flex-wrap: nowrap
+        width: 100%
+      &__description
+        background-color: rgba(189, 255, 233, 0.67)
+        padding: 20px 20px 10px
+        border-top-left-radius: 15px
+        border-top-right-radius: 15px
+        min-height: 150px
+        @media screen and (min-width: 550px) and (max-width: 1200px)   
+          border-top-right-radius: 0
+          border-top-left-radius: 15px
+          border-bottom-left-radius: 15px
+        p
+          margin: 0
+          font-size: 18px
+      &__title
+        background-color: rgba(90,233,185,0.67)
+        padding: 10px 20px 20px
+        border-bottom-left-radius: 15px
+        border-bottom-right-radius: 15px
+        min-height: 40px
+        @media screen and (min-width: 550px) and (max-width: 1200px)  
+          border-bottom-left-radius: 0
+          border-top-right-radius: 15px
+          border-bottom-right-radius: 15px
+
+#contact
+  margin: 40px 20px
+  min-height: 200px
+  padding: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  .contact-box
+    margin-top: 10px
+    padding: 25px
+    background-color: rgba(90,233,185,0.67)
+    border-radius: 30px
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    flex-wrap: nowrap
+    align-items: center
+    a
+      font-size: 24px
+      color: black
+      font-weight: bold
+    font-size: 18px
+    width: 50%
+    @media screen and (max-width: $small)  
+      width: 100% 
+    @media screen and (min-width: $small) and (max-width: $medium) 
+      width: 90% 
+     
+
+footer 
+  min-height: 50px
+  padding: 20px 
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  align-items: center
+  flex-wrap: wrap 
+  a 
+    text-decoration: none
+    font-size: 17px
+    font-weight: bold
+    color: black
+    &:hover
+      color: green
+      text-decoration: underline
+
